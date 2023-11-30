@@ -1,0 +1,13 @@
+services:
+  fiber-htmx:
+    image: cosmtrek/air
+    # working_dir value has to be the same of mapped volume
+    working_dir: /app
+    ports:
+      - 3000:3000
+    environment:
+      - ENV_A=${ENV_A}
+      - ENV_B=${ENV_B}
+      - ENV_C=${ENV_C}
+    volumes:
+      - .:/app/
